@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 
 class App extends Component {
 
+  componentDidMount() {
+    console.log(this.props)
+    this.props.fetchCats()
+  }
+
   render() {
     console.log(this.props.catPics)
     return (
