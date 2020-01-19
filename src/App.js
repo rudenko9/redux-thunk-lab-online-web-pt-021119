@@ -22,7 +22,6 @@ class App extends Component {
     );
   }
 }
-
 const mapStateToProps = state => {
   return {
     catPics: state.cats,
@@ -35,6 +34,4 @@ const mapDispatchToProps = dispatch => {
     fetchCats: () => dispatch(fetchCats())
   }
 }
-
-
 export default connect(mapStateToProps, mapDispatchToProps)(App)
