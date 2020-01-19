@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 class App extends Component {
 
   render() {
+    console.log(this.props.catPics)
     return (
       <div>
         <h1>CatBook</h1>
@@ -13,4 +14,11 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  return {
+    catPics: state.cats,
+    loading: state.loading
+  }
+}
+
+export default connect(mapStateToProps)(App)
