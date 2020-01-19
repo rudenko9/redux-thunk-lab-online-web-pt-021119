@@ -14,6 +14,10 @@ class App extends Component {
     this.props.fetchCats()
   }
 
+  isLoadingMsg = () => {
+    if(this.props.loading) return <h2>Loading...</h2>
+  }
+
   render() {
     console.log(this.props.catPics)
     return (
